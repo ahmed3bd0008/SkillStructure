@@ -8,7 +8,7 @@ namespace TestApplication.Extension
     {
         public static void ConnectedSql(this IServiceCollection services, IConfiguration configuration)
         {
-           services.AddDbContextPool<AppDbContext>(opt=>opt.UseSqlServer(configuration.
+           services.AddDbContextPool<AppDbContextTest>(opt=>opt.UseSqlServer(configuration.
                                                                 GetConnectionString("apiTestContext"),
                                                                     d=>d.MigrationsAssembly("TestApplication")));
         }

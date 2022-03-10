@@ -5,10 +5,10 @@ namespace Repository.Implementation
 {
     public class UntityOfWork : IUntityOfWork
     {
-        private readonly AppDbContext _context;
+        private readonly AppDbContextTest _context;
         private  GenericRepository<AddressBook> _genericRepository;
 
-        public UntityOfWork(AppDbContext context)
+        public UntityOfWork(AppDbContextTest context)
         {
             _context=context;
         }

@@ -11,10 +11,10 @@ namespace Repository.Implementation
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : EntityId
     {
-        private readonly AppDbContext _context;
+        private readonly AppDbContextTest _context;
         private readonly DbSet<T> _entity;
 
-        public GenericRepository(AppDbContext context)
+        public GenericRepository(AppDbContextTest context)
         {
             _context=context;
             _entity=_context.Set<T>();

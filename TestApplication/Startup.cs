@@ -36,6 +36,11 @@ namespace TestApplication
             services.configurationRepositoryMethod();
             services.configurationServicesMethod();
             services.AddAutoMapper(typeof(AppProfileConfiguration));
+
+
+            //Authenication 
+            services.AddAuthentication();
+            services.ConfigurationIdentity();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +56,7 @@ namespace TestApplication
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
