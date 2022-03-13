@@ -37,7 +37,7 @@ namespace TestApplication
             services.configurationServicesMethod();
             services.AddAutoMapper(typeof(AppProfileConfiguration));
 
-
+           services.ConnectedSql(Configuration);
             //Authenication 
             services.AddAuthentication();
             services.ConfigurationIdentity();
@@ -52,7 +52,7 @@ namespace TestApplication
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestApplication v1"));
             }
-
+     
             app.UseHttpsRedirection();
 
             app.UseRouting();

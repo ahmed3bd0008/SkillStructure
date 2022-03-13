@@ -2,9 +2,9 @@ using Entity.Core;
 using Microsoft.EntityFrameworkCore;
 namespace Repository.Configuration
 {
-    public class AddressBookConfiguration : IEntityTypeConfiguration<AddressBook>
+    public class AddressBookConfiguration : IEntityTypeConfiguration<Room>
     {
-        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<AddressBook> builder)
+        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Room> builder)
         {
            
         }

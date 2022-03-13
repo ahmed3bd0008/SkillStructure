@@ -13,7 +13,9 @@ namespace Repository.Context
         {
             
         }
-      public   DbSet<AddressBook>addressBooks{set; get;}
+      public   DbSet<Room>Rooms{set; get;}
+      public   DbSet<RoomType>RoomTypes{set; get;}
+      public   DbSet<RatePerRoom>RatePerRooms{set; get;}
     protected  override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

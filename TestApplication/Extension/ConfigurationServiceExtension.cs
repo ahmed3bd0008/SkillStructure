@@ -8,7 +8,8 @@ namespace TestApplication.Extension
     {
          public static void configurationRepositoryMethod(this IServiceCollection services)
         {
-            services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+             services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+            services.AddScoped(typeof(IUntityOfWork),typeof(UntityOfWork));
         }
         public static void configurationServicesMethod(this IServiceCollection services)
         {

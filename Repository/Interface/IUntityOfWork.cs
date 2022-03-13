@@ -5,6 +5,6 @@ namespace Repository.Interface
 {
     public interface IUntityOfWork
     {
-           GenericRepository<AddressBook> genericRepository { get; }
+           GenericRepository<Room> genericRepository { get; }
     }
 }
